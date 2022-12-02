@@ -21,7 +21,7 @@ public class AniTest {
 		System.out.println(dog.name);
 		System.out.println(dog.age);
 		//고양이 객체 생성, 이름과 나이 지정해서 출력 한번 해보기
-		Animal cat = new Animal();
+		Animal cat = new Animal();     
 		cat.name="고양이";
 	
 		cat.age=3;
