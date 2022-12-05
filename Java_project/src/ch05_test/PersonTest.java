@@ -11,11 +11,11 @@ public class PersonTest {
 		  jhh.weight=45F;
 		  
 		  //set(메서드)을 이용해서 name 값 설정하기
-		  jhh.setName("정하현 setter로 추가했음"); // SET이라는 메서드를 이용함
+		  jhh.setName("정하현 (setter로 추가했음)"); // SET이라는 메서드를 이용함
 		  jhh.showInfo();
 		  //get(메서드)를 이용할 것이냐?
-		  System.out.println("get메서드로 이름호출"+jhh.getName());
-		 
+		  System.out.println("get메서드로 이름호출 : "+jhh.getName());
+		  
 		  
 		  
 		  //매개변수가 1개인 생성자를 호출

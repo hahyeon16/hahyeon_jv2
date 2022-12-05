@@ -11,6 +11,7 @@ public class Person {
 	  float height;
 	  
 	  //자동으로 생성된 set, get 함수등(아래 name 들어 있는 문장)
+	  
 	  public String getName() {
 		return name;
 	}

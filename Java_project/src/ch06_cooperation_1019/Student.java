@@ -22,9 +22,15 @@ public class Student {
 		  this.money -= 1500;
 	 }
 	    
+
+	 public void takeTaxi(KakaoTaxi kakaotaxi) {
+		 kakaotaxi.take(4000);
+		  this.money -= 4000;
+	 }
+	    
 	 public void showInfo() {
 		  System.out.println(studentName + "님의 남은 돈은 " + money + "입니다.");
 	 }
 
-
+	 
 }
