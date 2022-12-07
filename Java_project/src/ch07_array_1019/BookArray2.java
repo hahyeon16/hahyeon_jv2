@@ -3,8 +3,14 @@ package ch07_array_1019;
 public class BookArray2 {
 
 	public static void main(String[] args) {
+		// 추가 사항,  Book 클래스에 매개변수가 3개인 생성자를 만들기.
+		// 해당 매개변수 요소는 책이름, 작가, 가격 추가하기
+		// library2 참조형 변수 배열 만들기, 크기는 3개만 만들기
+		// 출력은 기존 showBookInfo()를 활용함.
+		
 		Book[] library = new Book[5];
 		Student[] students = new Student[5];
+		Book[] library2 = new Book[3];
 		students[0] = new Student("이상용1",20000);
 		students[1] = new Student("이상용2",20000);
 		students[2] = new Student("이상용3",20000);
@@ -17,8 +23,17 @@ public class BookArray2 {
 		library[3] = new Book("토지", "박경리");
 		library[4] = new Book("어린왕자", "생텍쥐페리");
 		
-		for(int i=0; i<students.length; i++){
-			students[i].showInfo();
+		library2[0] = new Book("책a", "김작가", 20000);
+		library2[1] = new Book("책b", "박작가", 30000);
+		library2[2] = new Book("책c", "이작가", 10000);
+		
+		
+//		for(int i=0; i<students.length; i++){
+//			students[i].showInfo();
+//		}
+		
+		for(int i=0; i<library2.length; i++){
+			library2[i].showBookInfo();
 		}
 		
 //		for(int i=0; i<library.length; i++){
