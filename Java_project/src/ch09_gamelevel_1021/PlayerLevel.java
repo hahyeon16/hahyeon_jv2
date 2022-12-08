@@ -6,6 +6,7 @@ public abstract class PlayerLevel {
 	public abstract void run();
 	public abstract void jump();
 	public abstract void turn();
+	public abstract void gun();
 	public abstract void showLevelMessage();
 	
 	// 템플릿 메서드 , go 메서드 , 매개변수  count 가 들어가고,
@@ -17,5 +18,6 @@ public abstract class PlayerLevel {
 			jump();
 		}
 		turn();
+		gun();
 	}
 }

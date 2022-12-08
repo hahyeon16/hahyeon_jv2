@@ -19,6 +19,12 @@ public class BeginnerLevel extends PlayerLevel{
 	}
 
 	@Override
+	public void gun() {
+		// TODO Auto-generated method stub
+		System.out.println("gun 할 줄 모르지롱.");
+	}
+
+	@Override
 	public void showLevelMessage() {
 		System.out.println("***** 초보자 레벨 입니다. *****");
 	}
