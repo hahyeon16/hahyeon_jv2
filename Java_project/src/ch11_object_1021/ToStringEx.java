@@ -1,6 +1,9 @@
 package ch11_object_1021;
 
-class Book{
+class Book{ //암묵적으로 무엇을 상속 받고 있죠? Object
+	//Object toString 메서드가 존재합니다.
+	//이 메서드는 의미가 없는 해당 메모리 주소값을 출력을함
+	//실제 작업은 데이터를 다루지 주소값을 다루지 않으므로 재정의를 함
 	
 	int bookNumber;
 	String bookTitle;

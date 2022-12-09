@@ -11,7 +11,9 @@ public class SchedulerTest {
 		System.out.println("L : 쉬고 있거나 대기가 가장 적은 상담원에게 할당 ");
 		System.out.println("P : 우선순위가 높은 고객 먼저 할당 ");
 		
-		int ch = System.in.read();
+		int ch = System.in.read(); //in(인풋) : read로 읽어 받아서 ch에 대입, int로 형변환 (묵시적: 작->큰집)
+		
+		// Scheduler 라는 인터페이스를 구현한 모든 클래스를 담을 수 있습니다. 인터페이스 다형성.
 		Scheduler scheduler = null;
 		
 		if(ch == 'R' || ch == 'r'){
