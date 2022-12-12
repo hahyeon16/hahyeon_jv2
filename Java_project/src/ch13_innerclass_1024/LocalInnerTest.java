@@ -29,7 +29,7 @@ class Outer{
 				System.out.println("Outter.sNum = " + Outer.sNum + "(외부 클래스 정적 변수)");
 				}
 			}
-		 return new MyRunnable(); // 리터 타입이 new MyRunnable(); -> 사실은 Runnable 를 구현했다. 그래서, 
+		 return new MyRunnable(); // 리턴 타입이 new MyRunnable(); -> 사실은 Runnable 를 구현했다. 그래서, 
 		 // 상위 개념이 있다. 
 	}
 }

@@ -2,18 +2,21 @@ package ch13_innerclass_1024;
 
 class OutClass {
 
+	//outclass의 멤버변수
 	private int num = 10;
 	private static int sNum = 20;
+	///포함관계, 다른 클래스의 객체(참조형변수)::
 	private InClass inClass;
 	
 	public OutClass(){
 		inClass = new InClass(); // 내부 클래스 생성
 	}
 	
-	class InClass{
+	//static이 없어서, 인스턴스 내부 클래스, 객체 생성해서 접근 해야함
+	class InClass{ //:인스턴스 멤버변수
 		
 		int inNum = 100;
-		//static int sInNum = 200;  //에러 남
+		//static int sInNum = 200;  //에러 남 // 객체로 접근해야하는데 static이 나와서 오류(static은 객체없이 사용)
 		
 		void inTest(){
 			System.out.println("OutClass num = " +num + "(외부 클래스의 인스턴스 변수)");
@@ -60,7 +63,7 @@ public class InnerTest{
 	
 		// 외부 클래스 생성자 호출시, 안에 구현부에 
 		// inClass = new InClass(); // 내부 클래스 생성 들어가 있음. 
-		OutClass outClass = new OutClass();
+		OutClass outClass = new OutClass();  //outclass형으로 객체 생성
 		
 		
 		System.out.println("외부 클래스 이용하여 내부 클래스 기능 호출");

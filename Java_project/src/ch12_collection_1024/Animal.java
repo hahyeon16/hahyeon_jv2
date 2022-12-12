@@ -23,33 +23,66 @@ public class Animal implements Comparable<Animal>{ //comparable : 시스템상�
 		this.animalName = animalName;
 	}
 	
-	@Override
-	public String toString(){   //toString 메소드 오버로딩
-		return animalName + " 회원님의 아이디는 " + animalId + "입니다";
-	}
-
-	@Override
-	public int hashCode() {
-		return animalId;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if( obj instanceof Animal){
-			Animal member = (Animal)obj;
-			if( this.animalId == member.animalId )
-				return true;
-			else 
-				return false;
+	//기존 Object 에 있는 메서드를 그대로 사용하기 싫어서 재정의.
+		@Override
+		public String toString(){   //toString 메소드 오버로딩
+			return animalName + " animal의 아이디는 " + animalId + "입니다";
 		}
-		return false;
-	}
 
-	@Override
-	public int compareTo(Animal member) {
-		
-		//return (this.animalId - member.animalId);   //오름차순
-		return (this.animalId - member.animalId) *  (-1);   //내림 차순
-	}
-}
+		@Override
+		public int hashCode() {
+			return animalId;
+		}
 
+		@Override
+		public boolean equals(Object obj) {
+			if( obj instanceof Animal){
+				Animal animal = (Animal)obj;
+				if( this.animalId == animal.animalId )
+					return true;
+				else 
+					return false;
+			}
+			return false;
+		}
+
+		@Override
+		public int compareTo(Animal animal) {
+			
+			//return (this.animalId - member.animalId);   //오름차순
+			return (this.animalId - animal.animalId) *  (-1);   //내림 차순
+		}
+	} 
+		//::: 이 부분이 답
+	
+	
+//	@Override
+//	public String toString(){   //toString 메소드 오버로딩
+//		return animalName + " 회원님의 아이디는 " + animalId + "입니다";
+//	}
+//
+//	@Override
+//	public int hashCode() {
+//		return animalId;
+//	}
+//
+//	@Override
+//	public boolean equals(Object obj) {
+//		if( obj instanceof Animal){
+//			Animal member = (Animal)obj;
+//			if( this.animalId == member.animalId )
+//				return true;
+//			else 
+//				return false;
+//		}
+//		return false;
+//	}
+//
+//	@Override
+//	public int compareTo(Animal member) {
+//		
+//		//return (this.animalId - member.animalId);   //오름차순
+//		return (this.animalId - member.animalId) *  (-1);   //내림 차순
+//	}
+//}
+//
