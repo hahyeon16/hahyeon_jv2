@@ -6,21 +6,21 @@ public class MemberTreeMapTest {
 
 	public static void main(String[] args) {
 
-		MemberTreeMap memberHashMap = new MemberTreeMap();
+		MemberTreeMap member = new MemberTreeMap();
 		
 		Member memberPark = new Member(1003, "�ڼ���");
 		Member memberLee = new Member(1001, "������");
 		Member memberHong = new Member(1004, "ȫ�浿");
 		Member memberSon = new Member(1002, "�չα�");
 		
-		memberHashMap.addMember(memberPark);
-		memberHashMap.addMember(memberLee);
-		memberHashMap.addMember(memberHong);
-		memberHashMap.addMember(memberSon);
+		member.addMember(memberPark);
+		member.addMember(memberLee);
+		member.addMember(memberHong);
+		member.addMember(memberSon);
 		
-		memberHashMap.showAllMember();
+		member.showAllMember();
 		
-		memberHashMap.removeMember(1004);
-		memberHashMap.showAllMember();
+		member.removeMember(1004);
+		member.showAllMember();
 	}
 }

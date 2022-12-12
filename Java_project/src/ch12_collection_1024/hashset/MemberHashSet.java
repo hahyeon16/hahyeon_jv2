@@ -6,7 +6,7 @@ import java.util.Iterator;
 import ch12_collection_1024.Member;
 
 public class MemberHashSet {
-	private HashSet<Member> hashSet;
+	private HashSet<Member> hashSet; //hashSet객체 사용하기 위해 가져옴
 
 	public MemberHashSet(){
 		hashSet = new HashSet<Member>();

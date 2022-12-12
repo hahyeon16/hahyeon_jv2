@@ -7,6 +7,8 @@ import ch12_collection_1024.Member;
 
 public class MemberArrayList {
 
+	//private int age; 랑 같은 형태라고 생각하면됨
+	//포함 관계로 다른 클래스 형의 객체를 가지고 왔음 (6번째줄에서 임포트)
 	private ArrayList<Member> arrayList;  // ArrayList 선언 
 
 	public MemberArrayList(){
@@ -14,20 +16,23 @@ public class MemberArrayList {
 	}
 	
 	public void addMember(Member member){  //ArrayList 에 멤버 추가
-		arrayList.add(member);
+		arrayList.add(member); //add는 내가 만든 것이 아니라 시스템 상에 있는것 member 를 추가
 	}
 	
-	public boolean removeMember(int memberId){  // 멤버 아이디를 매개변수로, 삭제 여부를 반환
+	public boolean removeMember(int memberId){  // 멤버 아이디를 매개변수로, 삭제 여부를 반환 // removemember는 시스템상 아니고 만든것
 		
 		for(int i =0; i<arrayList.size(); i++){ // 해당 아이디를 가진 멤버를 ArrayList에서 찾음
-			Member member = arrayList.get(i);
+			Member member = arrayList.get(i); 
 			int tempId = member.getMemberId();
 			if(tempId == memberId){            // 멤버아이디가 매개변수와 일치하면 
 				arrayList.remove(i);           // 해당 멤버를 삭제
 				return true;                   // true 반환
 			}
 		}
-		
+		// interator 인터페이스인데, 반복 실행을 위해서 사용함
+		// 컬렉션, 여러개의 데이터를 담는 그릇인데,
+		// 컬렉션에 있는 데이터를 iterator(반복자)에 담아서, 반복 작업을 함
+		// 마치 반복문이랑 작업이 똑같음
 		Iterator<Member> ir = arrayList.iterator();
 		while(ir.hasNext()) {
 			Member member = ir.next();

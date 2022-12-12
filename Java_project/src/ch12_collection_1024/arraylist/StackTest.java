@@ -30,7 +30,7 @@ public class StackTest {
 		stack.push("B");
 		stack.push("C");
 		
-		System.out.println(stack.pop());
+		System.out.println(stack.pop()); // 나올 때는 역으로 나옴
 		System.out.println(stack.pop());
 		System.out.println(stack.pop());
 	}

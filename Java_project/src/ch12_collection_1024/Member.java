@@ -1,6 +1,6 @@
 package ch12_collection_1024;
 
-public class Member implements Comparable<Member>{
+public class Member implements Comparable<Member>{ //comparable : 시스템상에서 만들어져 있던 것
 
 	private int memberId;        //회원 아이디
 	private String memberName;   //회원 이름
@@ -48,7 +48,8 @@ public class Member implements Comparable<Member>{
 	@Override
 	public int compareTo(Member member) {
 		
-		return (this.memberId - member.memberId);   //오름차순
-		//return (this.memberId - member.memberId) *  (-1);   //내림 차순
+		//return (this.memberId - member.memberId);   //오름차순
+		return (this.memberId - member.memberId) *  (-1);   //내림 차순
 	}
 }
+

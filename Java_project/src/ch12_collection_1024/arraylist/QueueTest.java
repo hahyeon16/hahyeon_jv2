@@ -30,7 +30,7 @@ public class QueueTest {
 		queue.enQueue("B");
 		queue.enQueue("C");
 		
-		System.out.println(queue.deQueue());
+		System.out.println(queue.deQueue());// queue는 들어온 순서대로 먼저 나감
 		System.out.println(queue.deQueue());
 		System.out.println(queue.deQueue());
 	}
