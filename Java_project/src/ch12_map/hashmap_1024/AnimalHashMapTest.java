@@ -30,7 +30,7 @@ public class AnimalHashMapTest {
 		// 반복자를 이용하는 알고리즘이 포함되어 있음. 
 		animalHashMap.showAllMember();
 		
-		animalHashMap.removeMember(1004);
+		animalHashMap.removeMember(1006);
 		animalHashMap.showAllMember();
 	}
 }  //애니멀 문제 답

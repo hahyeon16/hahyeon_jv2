@@ -24,7 +24,7 @@ public class TravelCustomer {
 		return price;
 	}
 	
-	public String toString() {
+	public String toString() { // 의미없는 객체 호출하지 않기 위해 투스트링 사용함
 		return "name: " + name + "age: " + age + "price: " + price; 
 	}
 }

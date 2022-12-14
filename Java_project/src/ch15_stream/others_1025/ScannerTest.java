@@ -9,12 +9,14 @@ public class ScannerTest {
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("이름:");
+		//문자열 읽기
 		String name = scanner.nextLine();
 		System.out.println("직업:");
 		String job = scanner.nextLine();
 		System.out.println("사번:");
 		int num = scanner.nextInt();
-				
+		//int 자료형을 읽음
+		
 		System.out.println(name);
 		System.out.println(job);
 		System.out.println(num);

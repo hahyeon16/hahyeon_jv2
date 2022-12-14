@@ -9,7 +9,7 @@ public class SystemInTest2 {
 		
 		int i;
 		try { // enter 입력을 하게되면, '\n' 인식함. 
-			while( (i = System.in.read()) != '\n' ) {
+			while( (i = System.in.read()) != '\n' ) { // \n = enter(줄바꿈) , enter 이면 수행, 아니면 빠져나옴
 				System.out.print((char)i);
 			}
 		} catch (IOException e) {
