@@ -12,7 +12,7 @@ public class FileOutputStreamTest2 {
 		
 			int [] bs = new int[1000000000];
 			int data = 65;        //'A' 의 아스키 값
-			for(int i = 0; i < 100000; i++){  // A-Z 까지 배열에 넣기
+			for(int i = 0; i < 10000; i++){  // A-Z 까지 배열에 넣기
 				bs[i] = data;
 				data++;
 				fos.write(data);

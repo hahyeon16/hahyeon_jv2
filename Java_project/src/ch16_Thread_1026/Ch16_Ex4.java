@@ -11,9 +11,9 @@ public class Ch16_Ex4 {
 	        // 우선권을 얻을수 있다. 
 	        System.out.println( Thread.MAX_PRIORITY);
 	        // 스레드 우선권의 최대값을 출력한다. 최댓값은 10.
-	        System.out.println( Thread.NORM_PRIORITY );
+	        System.out.println( Thread.NORM_PRIORITY ); //NORM:NORMAL
 	        // 스레드 우선권의 최대값을 출력한다. 기본값은 5.
 	        System.out.println( Thread.MIN_PRIORITY );
-	        // 스레드 우선권의 최대값을 출력한다. 최소값은 1.
+	        // 스레드 우선권의 최대값을 출력한다. 최소값은 1.S
 	      }
 	 }

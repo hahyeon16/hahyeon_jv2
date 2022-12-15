@@ -10,7 +10,7 @@ public class Student {
 	
 	//학생의 성적 리스트 
 	//addSubjectSocre() 메서드가 호출되면 리스트에 추가 됨
-	private ArrayList<Score> scoreList = new ArrayList<Score>(); 
+	private ArrayList<Score> scoreList = new ArrayList<Score>();  //scoreList  이렇게 리스트로 여러개 선택가능
 	
 	public Student( int studentId, String studentName, Subject majorSubject){
 		this.studentId = studentId;
@@ -18,6 +18,7 @@ public class Student {
 		this.majorSubject = majorSubject;
 	}
 	
+	//학생이 수강한 과목의 점수를 등록하는 메서드
 	public void addSubjectScore(Score score){
 		scoreList.add(score);
 	}
@@ -46,10 +47,13 @@ public class Student {
 		this.majorSubject = majorSubject;
 	}
 
+	
+	// 학생의 점수 목록 조회
 	public ArrayList<Score> getScoreList(){
 		return scoreList;
 	}
 	
+	//학생의 점수 목록 설정
 	public void setScoreList(ArrayList<Score> scoreList) {
 		this.scoreList = scoreList;
 	}

@@ -15,13 +15,14 @@ import studentInfoEx.utils.Define;
 public class GenerateGradeReport {
 
 	School school = School.getInstance();
-	public static final String TITLE = " 수강생 학점 \t\t\n";
+	public static final String TITLE = " 과목의 수강생 학점 \t\t\n";
 	public static final String HEADER = " 이름  |  학번  |중점과목| 점수   \n ";
 	public static final String LINE = "-------------------------------------\n";
+	//메모리 효율성이 좋은 stringbuffer를 이용했다
 	private StringBuffer buffer = new StringBuffer();  
 	
-	public String getReport(){
-		ArrayList<Subject> subjectList = school.getSubjectList();  // 모든 과목에 대한 학점 산출
+ 	public String getReport(){
+		ArrayList<Subject> subjectList = school.getSubjectList();  // 모든 과목에 대한 학점 산출 //school은 하나의 객체. 확장성이 없음
 		for( Subject subject : subjectList) {
 			makeHeader(subject);
 			makeBody(subject);
@@ -31,7 +32,7 @@ public class GenerateGradeReport {
 	}
 	
 	public void makeHeader(Subject subject){
-		buffer.append(GenerateGradeReport.LINE);
+		buffer.append(GenerateGradeReport.LINE); // 기울임꼴 : 상수
 		buffer.append("\t" + subject.getSubjectName());
 		buffer.append(GenerateGradeReport.TITLE );
 		buffer.append(GenerateGradeReport.HEADER );
